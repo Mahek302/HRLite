@@ -1,0 +1,282 @@
+/* src/App.css */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Custom App styles for HR system */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Dark mode specific app styles */
+.dark .app-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Light mode specific app styles */
+:root:not(.dark) .app-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Theme toggle animation */
+.theme-toggle {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Card styling for both themes */
+.hr-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border-width: 1px;
+}
+
+.dark .hr-card {
+  background-color: #1e293b;
+  border-color: #374151;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+:root:not(.dark) .hr-card {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.hr-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styling */
+.hr-button {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-width: 1px;
+}
+
+.dark .hr-button {
+  background-color: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+}
+
+:root:not(.dark) .hr-button {
+  background-color: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+}
+
+.hr-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.hr-button-outline {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-width: 1px;
+}
+
+.dark .hr-button-outline {
+  background-color: transparent;
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+:root:not(.dark) .hr-button-outline {
+  background-color: transparent;
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+.hr-button-outline:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+/* Input styling */
+.hr-input {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  border-width: 1px;
+  width: 100%;
+}
+
+.dark .hr-input {
+  background-color: #1e293b;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+:root:not(.dark) .hr-input {
+  background-color: #ffffff;
+  color: #1e293b;
+  border-color: #e2e8f0;
+}
+
+.hr-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+/* Badge styling */
+.hr-badge {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.dark .hr-badge-primary {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #8b5cf6;
+}
+
+:root:not(.dark) .hr-badge-primary {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+
+.dark .hr-badge-success {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+:root:not(.dark) .hr-badge-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+/* Status indicators */
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.status-active {
+  background-color: #10b981;
+}
+
+.status-inactive {
+  background-color: #ef4444;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+}
+
+/* Loading spinner */
+.hr-spinner {
+  border: 3px solid rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid #8b5cf6;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Alert styling */
+.hr-alert {
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-width: 1px;
+}
+
+.dark .hr-alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+:root:not(.dark) .hr-alert-success {
+  background-color: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+  color: #065f46;
+}
+
+.dark .hr-alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+:root:not(.dark) .hr-alert-error {
+  background-color: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: #991b1b;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.dark .modal-content {
+  background-color: #1e293b;
+  color: #f9fafb;
+}
+
+:root:not(.dark) .modal-content {
+  background-color: #ffffff;
+  color: #1e293b;
+}
